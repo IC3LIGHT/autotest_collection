@@ -24,6 +24,7 @@ try:
     new_window = browser.window_handles[1]
     browser.switch_to.window(new_window)
     browser.implicitly_wait(5)
+    browser.find_element(By.CSS_SELECTOR, '.Button2').click()
     browser.find_element(By.CSS_SELECTOR, '#passp-field-login').send_keys(email)
     browser.find_element(By.ID, 'passp:sign-in').click()
     browser.find_element(By.CSS_SELECTOR, '#passp-field-passwd').send_keys(password)
