@@ -1,0 +1,11 @@
+import requests
+from selenium import webdriver
+response = requests.get("https://api.example.com/users")
+assert response.status_code == 200
+data = response.json()
+assert data["total_users"] > 0
+browser = webdriver.Chrome()
+browser.get("https://www.example.com")
+element = driver.find_element_by_xpath("//input[@id='search-input']")
+element.send_keys("example")
+browser.quit()
